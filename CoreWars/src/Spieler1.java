@@ -1,10 +1,19 @@
 
 public class Spieler1 extends Spieler {
+	public int pos;
 
-	public Spieler1(Spiel spiel, int i, String farbe) {
-		super(spiel, i, farbe);
+	public Spieler1(Spiel spiel, int pos, String farbe) {
+		super(spiel, pos, farbe);
 		befehle.add("mov,1");
-		befehle.add("add,1,1");
+
+	}
+
+	public int getPos() {
+		return pos;
+	}
+
+	public void setPos(int pos) {
+		this.pos = pos;
 	}
 
 }

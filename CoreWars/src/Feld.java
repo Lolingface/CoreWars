@@ -7,12 +7,17 @@ public class Feld extends Kaestchen {
 		super(2, 20, 512, 1, true);
 	}
 
-	public void zeichne(ArrayList<Spieler> spieler) {
+	public void zeichne(ArrayList<Spieler> spieler, ArrayList<Integer> bomben) {
 		for (int i = 0; i < zellen.length; i++) {
 			farbeSetzen(i, 1, "weiss");
 		}
-		for (Spieler z : spieler)
+
+		for (Spieler z : spieler) {
 			farbeSetzen(z.getPos(), 1, z.getFarbe());
+		}
+		for (Integer b : bomben) {
+			farbeSetzen(b, 1, "gruen");
+		}
 	}
 
 }
